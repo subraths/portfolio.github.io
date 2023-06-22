@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
       </nav>
       {open && (
-        <div className="flex flex-col items-center basis-full">
+        <div className="flex flex-col items-center gap-4 basis-full">
           <Nav />
         </div>
       )}
