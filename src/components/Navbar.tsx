@@ -11,10 +11,10 @@ export default function Navbar() {
   return (
     <>
       <nav className="text-[#A6A6A7] font-bold flex justify-end  w-1/4">
-        <div className="hidden w-full md:flex justify-between">
+        <div className="hidden w-full lg:flex justify-between">
           <Nav />
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={toggleNavbar}
             className="text-2xl transition-transform"
