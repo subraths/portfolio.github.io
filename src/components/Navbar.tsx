@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,7 +15,12 @@ export default function Navbar() {
           <Nav />
         </div>
         <div className="md:hidden">
-          <button onClick={toggleNavbar}>X</button>
+          <button
+            onClick={toggleNavbar}
+            className="text-2xl transition-transform"
+          >
+            {open ? <RxCross1 /> : <AiOutlineMenu />}
+          </button>
         </div>
       </nav>
       {open && (
@@ -32,7 +39,7 @@ const Nav = () => {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400"
+            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400 mb-[5px]"
             : "custom-underscore"
         }
       >
@@ -43,7 +50,7 @@ const Nav = () => {
         to="/about"
         className={({ isActive }) =>
           isActive
-            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400"
+            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400 mb-[5px]"
             : "custom-underscore"
         }
       >
@@ -53,7 +60,7 @@ const Nav = () => {
         to="/contact"
         className={({ isActive }) =>
           isActive
-            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400"
+            ? "text-white underline underline-offset-[5px] decoration-[3px] decoration-sky-400 mb-[5px]"
             : "custom-underscore"
         }
       >
