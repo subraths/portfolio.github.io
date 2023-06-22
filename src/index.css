@@ -7,11 +7,15 @@
     position: relative;
   }
 
+  .custom-underscore:hover {
+    color: #456e77;
+  }
+
   .custom-underscore:after {
     content: "";
     width: 0;
-    height: 2px;
-    background-color: white;
+    height: 3px;
+    background-color: #456e77;
     position: absolute;
     left: 50%;
     bottom: -3px;
